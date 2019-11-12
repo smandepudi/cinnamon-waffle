@@ -1,0 +1,46 @@
+<div class="userForm">
+    <h3>Profile Information</h3>
+
+    <form novalidate (ngSubmit)="onSubmit(profileForm)" #profileForm="ngForm">
+        <div class="profileFormTable">
+            <div class="form-group">
+                <input type="text" placeholder="firstname" class="form-control" name="firstname" ngModel required/>
+                <strong>{{profileForm.value.firstname}} </strong>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="lastname" class="form-control" name="lastname" ngModel required/>
+                <strong>{{profileForm.value.lastname}} </strong>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="email" name="email" class="form-control" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" required email>
+                <div *ngIf="profileForm.submitted && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                </div>
+                <strong>{{profileForm.value.email}} </strong>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="password" class="form-control" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': password.touched && password.invalid }" required minlength="6">
+                <div *ngIf="profileForm.submitted && password.invalid" class="invalid-feedback">
+                    <div *ngIf="password.errors.required">Password is required</div>
+                    <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirmPassword" placeholder="confirm password" class="form-control" [(ngModel)]="model.confirmPassword" #confirmPassword="ngModel" [ngClass]="{ 'is-invalid': confirmPassword.touched && confirmPassword.invalid }" required
+                    minlength="6">
+                <div *ngIf="profileForm.submitted && confirmPassword.invalid" class="invalid-feedback">
+                    <div *ngIf="confirmPassword.errors.required">Confirm Password is required</div>
+                    <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea rows="4" cols="50" placeholder="message" class="form-control" name="message" ngModel required></textarea>
+            </div>
+            <!--             <button type="button" class="btn btn-primary" (click)="onSubmit(profileForm)">Submit</button>
+ -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
