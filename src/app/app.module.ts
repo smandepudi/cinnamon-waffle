@@ -7,12 +7,16 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { FormsModule} from '@angular/forms';
 import { TopNavigationComponent } from './top-navigation/top-navigation.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
+import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
+import { ProductTestComponent } from './product-test/product-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavigationComponent,
-    FormValidationComponent
+    FormValidationComponent,
+    ReactiveFormValidationComponent,
+    ProductTestComponent
   ],
   imports: [
     BrowserModule,

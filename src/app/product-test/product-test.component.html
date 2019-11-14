@@ -1,0 +1,17 @@
+<div class="productForm">
+    <p>Today is {{today | date}}</p>
+    <div *ngIf="!this.route.snapshot.params.id">
+        {{this.currentDate}}
+        <h2>List of products</h2>
+        <ul>
+            <li *ngFor="let p of this.allProducts" class="mb-2">
+                <a [routerLink]="['/product', p.id]">Product {{ p.id }}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="this.route.snapshot.params.id != null">
+        <div>Product {{ this.route.snapshot.params.id }} details</div>
+        <div><a [routerLink]="['/product']">Back To Product List</a></div>
+    </div>
+</div>
