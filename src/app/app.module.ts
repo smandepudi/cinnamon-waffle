@@ -9,6 +9,7 @@ import { TopNavigationComponent } from './top-navigation/top-navigation.componen
 import { FormValidationComponent } from './form-validation/form-validation.component';
 import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
 import { ProductTestComponent } from './product-test/product-test.component';
+import { HighLightDirective } from './directives/high-light.directive';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,17 @@ import { ProductTestComponent } from './product-test/product-test.component';
     TopNavigationComponent,
     FormValidationComponent,
     ReactiveFormValidationComponent,
-    ProductTestComponent
+    ProductTestComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
+  ],
+  exports: [
+    HighLightDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
