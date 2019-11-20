@@ -8,12 +8,17 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./form-validation.component.scss']
 })
 export class FormValidationComponent implements OnInit {
-  model: any = {};
+  user: any = {};
   constructor() { }
 
   ngOnInit() {
   }
   onSubmit(profileForm) {
+    alert('form submitted');
     console.log(profileForm.value);
+  }
+  checkForErrors() {
+    console.log('check for validation');
+    return true;
   }
 }

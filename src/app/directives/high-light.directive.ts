@@ -7,6 +7,6 @@ import { NG_VALIDATORS } from '@angular/forms';
 export class HighLightDirective {
 
   constructor(el: ElementRef) {
-    el.nativeElement.style.backgroundColor = 'none';
+    el.nativeElement.style.color = 'red';
    }
 }

@@ -1,0 +1,29 @@
+<div class="userForm">
+    <form novalidate (ngSubmit)="onSubmit(profileForm)" #profileForm="ngForm">
+        <div *ngIf="profileForm.pristine"><strong>Please start filling out the user details</strong></div>
+        <div *ngIf="profileForm.dirty">form values changed</div>
+        <div class="profileFormTable">
+            <div class="form-group">
+                <input type="text" placeholder="name" class="form-control" #name="ngModel" name="name" [(ngModel)]="user.name" required minlength="4" />
+                <!-- <strong>{{profileForm.value.name}} </strong> -->
+                <strong>{{name.value}} </strong>
+                <!-- <div *ngIf="profileForm.submitted && name.invalid">
+                    <div *ngIf="name.errors.required">Name is required</div>
+                    <div *ngIf="name.errors.minlength">Name has to be a minimum of 4 characters</div>
+                </div><br/> -->
+                <!-- <b><span class="statusLabel">Status :</span> {{name.status}} </b><br/>
+                <b><span class="statusLabel">Touched :</span>{{name.touched}} </b><br/>
+                <b><span class="statusLabel">Pristine : </span>{{name.pristine}} </b><br/>
+                <b><span class="statusLabel">Dirty :</span>{{name.dirty}} </b><br/> -->
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="email" name="email" class="form-control" [(ngModel)]="user.email" #email="ngModel" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" required email>
+                <strong>{{profileForm.value.email}} </strong>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

@@ -10,6 +10,7 @@ import { FormValidationComponent } from './form-validation/form-validation.compo
 import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
 import { ProductTestComponent } from './product-test/product-test.component';
 import { HighLightDirective } from './directives/high-light.directive';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HighLightDirective } from './directives/high-light.directive';
     FormValidationComponent,
     ReactiveFormValidationComponent,
     ProductTestComponent,
-    HighLightDirective
+    HighLightDirective,
+    SimpleFormComponent
   ],
   imports: [
     BrowserModule,

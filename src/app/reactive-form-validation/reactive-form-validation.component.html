@@ -1,3 +1,38 @@
 <div class="userForm">
-    reactive Forms here
+    <h3>User Data</h3>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        Form Status: {{userForm.status}}
+        <div class="form-group">
+            <input type="text" #refName placeholder="Name" formControlName="name" class="form-control" />
+            <!-- <p>{{refName.value}}</p> -->
+            <b>{{refName.className}}</b>
+            <!-- {{userForm.get('name').dirty}} -->
+
+            <div *ngIf="userForm.get('name').invalid && (userForm.get('name').dirty || userForm.get('name').touched)" class="alert alert-danger">
+                <div *ngIf="userForm.get('name').errors.required">
+                    Name is required.
+                </div>
+                <div *ngIf="userForm.get('name').errors.minlength">
+                    Name must be at least 4 characters long.
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Email" #refEmail formControlName="email" class="form-control" />
+        </div>
+        <div formGroupName="address">
+            <div class="form-group">
+                <input type="text" placeholder="Street" #refStreet formControlName="street" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="City" #refCity formControlName="city" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Zip" #refPostalCode formControlName="postalcode" class="form-control" />
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>

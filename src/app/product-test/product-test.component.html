@@ -1,7 +1,7 @@
 <div class="productForm">
-    <p>Today is {{today | date}}</p>
+    <p>Today is {{this.currentDate | date:"MM-dd-yy"}}</p>
+    <h3>Poduct Information</h3>
     <div *ngIf="!this.route.snapshot.params.id">
-        {{this.currentDate}}
         <h2>List of products</h2>
         <ul>
             <li *ngFor="let p of this.allProducts" class="mb-2">

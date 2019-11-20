@@ -13,7 +13,7 @@ export class ProductTestComponent implements OnInit {
 
   activeProduct: Product;
   test = true;
-  currentDate: string = undefined;
+  currentDate: Date = undefined;
   allProducts: Product[] = [
     new Product(1, 'Product 001'),
     new Product(2, 'Product 002'),
@@ -26,7 +26,8 @@ export class ProductTestComponent implements OnInit {
   constructor(private route: ActivatedRoute, private datePipe: DatePipe) { }
 
   ngOnInit() {
-    this.currentDate = this.datePipe.transform(new Date(), 'dd-MM-yyyy');
+    // this.currentDate = this.datePipe.transform(new Date(), 'dd-MM-yyyy');
+    this.currentDate = new Date(); // April 15, 1988
   }
 
 }
