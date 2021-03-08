@@ -1,6 +1,9 @@
-# MySurvivalApp
+# AngularJS UI component demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+
+The idea is to demonstrate how to showcase various UI components with AngularJS. The sample application tries to show best practices when it comes to: folders structure, using CLI, modules, testing, organizing navigation to name a few.
+
 
 ## Development server
 
