@@ -6,7 +6,7 @@ The idea is to demonstrate how to showcase various UI components with AngularJS.
 
 ## Stack 
 
-Awesome AngularJS on the client
+Awesome AngularJS on the client 
 CSS based on bootstrap
 Component Library based on Angular Material
 
