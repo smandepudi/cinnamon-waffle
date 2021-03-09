@@ -29,6 +29,7 @@ import { AutoCompleteFormComponent } from './auto-complete-form/auto-complete-fo
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { StepperFormComponent } from './stepper-form/stepper-form.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -48,7 +49,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     UserEntryFormComponent,
     PhotoPreviewComponent,
     AutoCompleteFormComponent,
-    StepperFormComponent
+    StepperFormComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

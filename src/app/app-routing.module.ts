@@ -12,6 +12,7 @@ import { PhotoLibraryComponent } from './photo-library/photo-library.component';
 import { UserEntryFormComponent } from './user-entry-form/user-entry-form.component';
 import { AutoCompleteFormComponent } from './auto-complete-form/auto-complete-form.component';
 import { StepperFormComponent } from './stepper-form/stepper-form.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'home', 
     component: HomeComponent
+  },
+  {
+    path: 'profile', 
+    component: ProfileComponent
   },
   { 
     path: 'about', 
