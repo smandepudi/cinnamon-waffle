@@ -1,0 +1,48 @@
+.bulkActionHeader {
+    position : fixed;
+    height: 50px;
+    display : flex;
+    justify-content: center;
+    background-color: #d4edda;
+    top : 60px;
+    width : 100%;
+    .bulkActionMessage {
+        margin-top : 15px;
+        margin-right : 10px;
+    }
+    .bulkActionButtons {
+        margin-top : 10px;
+        margin-right : 10px;
+        .likeBtn {
+            margin-right: 10px;
+        }
+    }
+}
+.photoLibraryContainer {
+    padding-top: 120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+  .mat-list-base {
+      display : flex;
+      justify-content: space-around;
+      height : auto;
+      width : auto;
+  }
+  .mat-list-item {
+      height : auto !important;
+      width : auto !important;
+  }
+  .mat-card-image {
+    width: 200px;
+    max-height: 300px;
+    height: auto;
+  }
+  .mat-card-header {
+    display: flex;
+    justify-content: space-around;
+  }
+  .selectItem {
+      margin-top : 8px;
+  }

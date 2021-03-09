@@ -1,0 +1,20 @@
+.photoPreviewContainer {
+    padding-top: 120px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 0 280px 0 280px;
+}
+.mat-dialog-container { 
+    transform: none; 
+    width: 500px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 10em;
+    left: 50em;
+    /* height: 10em; */
+    /* width: 20em; */
+    box-shadow: 0 0 5px rgb(0 0 0 / 27%);
+}

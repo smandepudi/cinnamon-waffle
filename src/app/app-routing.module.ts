@@ -5,17 +5,42 @@ import { ReactiveFormValidationComponent } from './reactive-form-validation/reac
 import { ProductTestComponent } from './product-test/product-test.component';
 import { ProductGuard } from './guards/product.guard';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { PhotoLibraryComponent } from './photo-library/photo-library.component';
+import { UserEntryFormComponent } from './user-entry-form/user-entry-form.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'templateForms',
+    redirectTo: 'home',
     pathMatch : 'full',
+  },
+  {
+    path: 'home', 
+    component: HomeComponent
+  },
+  { 
+    path: 'about', 
+    component: AboutComponent 
+  },
+  { 
+    path: 'userEntryForm', 
+    component: UserEntryFormComponent 
   },
   {
     path: 'simpleForm',
     component: SimpleFormComponent
+  },
+  {
+    path: 'expansionPanel',
+    component: ExpansionPanelComponent
+  },
+  {
+    path: 'photoLibrary',
+    component: PhotoLibraryComponent
   },
   {
     path: 'templateForms',
