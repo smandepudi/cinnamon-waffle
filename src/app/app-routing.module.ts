@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { PhotoLibraryComponent } from './photo-library/photo-library.component';
 import { UserEntryFormComponent } from './user-entry-form/user-entry-form.component';
+import { AutoCompleteFormComponent } from './auto-complete-form/auto-complete-form.component';
+import { StepperFormComponent } from './stepper-form/stepper-form.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,14 @@ const routes: Routes = [
   { 
     path: 'about', 
     component: AboutComponent 
+  },
+  {
+    path: 'autoCompleteForm', 
+    component: AutoCompleteFormComponent 
+  },
+  {
+    path: 'stepperForm', 
+    component: StepperFormComponent 
   },
   { 
     path: 'userEntryForm', 

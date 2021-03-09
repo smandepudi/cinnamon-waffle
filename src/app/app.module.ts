@@ -23,8 +23,12 @@ import { MatListModule } from '@angular/material/list';
 import { PhotoLibraryComponent } from './photo-library/photo-library.component';
 import { ToastrModule } from 'ngx-toastr';
 import { UserEntryFormComponent } from './user-entry-form/user-entry-form.component';
-import {MatDialogModule} from "@angular/material";
+import { MatDialogModule } from "@angular/material";
 import { PhotoPreviewComponent } from './photo-preview/photo-preview.component';
+import { AutoCompleteFormComponent } from './auto-complete-form/auto-complete-form.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { StepperFormComponent } from './stepper-form/stepper-form.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 
@@ -42,7 +46,9 @@ import { PhotoPreviewComponent } from './photo-preview/photo-preview.component';
     ExpansionPanelComponent,
     PhotoLibraryComponent,
     UserEntryFormComponent,
-    PhotoPreviewComponent
+    PhotoPreviewComponent,
+    AutoCompleteFormComponent,
+    StepperFormComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +69,8 @@ import { PhotoPreviewComponent } from './photo-preview/photo-preview.component';
     MatNativeDateModule,
     MatListModule,
     MatDialogModule,
+    MatAutocompleteModule,
+    MatStepperModule,
     ToastrModule.forRoot(
       {
         positionClass : 'top-center',
