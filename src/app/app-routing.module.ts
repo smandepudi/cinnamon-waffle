@@ -13,6 +13,7 @@ import { UserEntryFormComponent } from './user-entry-form/user-entry-form.compon
 import { AutoCompleteFormComponent } from './auto-complete-form/auto-complete-form.component';
 import { StepperFormComponent } from './stepper-form/stepper-form.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MyCounterComponent } from './my-counter/my-counter.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'stepperForm', 
     component: StepperFormComponent 
+  },
+  {
+    path: 'counterState', 
+    component: MyCounterComponent 
   },
   { 
     path: 'userEntryForm', 

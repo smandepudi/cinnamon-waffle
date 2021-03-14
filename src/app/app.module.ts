@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +32,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { StepperFormComponent } from './stepper-form/stepper-form.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ProfileComponent } from './profile/profile.component';
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { reducers, metaReducers } from './reducers';
+
 
 
 
@@ -50,7 +55,8 @@ import { ProfileComponent } from './profile/profile.component';
     PhotoPreviewComponent,
     AutoCompleteFormComponent,
     StepperFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    MyCounterComponent
   ],
   imports: [
     BrowserModule,
@@ -73,12 +79,17 @@ import { ProfileComponent } from './profile/profile.component';
     MatDialogModule,
     MatAutocompleteModule,
     MatStepperModule,
+    BrowserModule, 
+    StoreModule.forRoot({ count: counterReducer }),
     ToastrModule.forRoot(
       {
         positionClass : 'top-center',
         closeButton : true
       }
-    )
+    ),
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    })
     
   ],
   providers: [],
